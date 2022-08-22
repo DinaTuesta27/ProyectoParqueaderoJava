@@ -1,0 +1,108 @@
+package Atributos;
+
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+/**
+ *
+ * @author dinal
+ */
+public class Parqueadero {
+
+    /**
+     * @param args the command line arguments
+     */
+    static boolean disponible(int canti){
+        int par;
+        par=5;
+        if(canti<=par){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    static void lista(){
+        Scanner objeto=new Scanner (System.in);
+        String cantidad=JOptionPane.showInputDialog(null,"Por favor ingrese numero de vehiculos: ");
+        int disp=Integer.parseInt(cantidad);
+        int limite=5;
+        String carro[]=new String[disp];
+        if((disponible(disp)==true)&&(disp<=limite)&&(disp>0)){
+        for(int i=0;i<disp;i++){
+                System.out.println("Ingrese marca de los vehiculos: ");
+                String k=objeto.next();
+                carro[i]=k;
+            }
+            for(int i=0;i<carro.length;i++){
+                System.out.println("Los vehiculos son: "+carro[i]);  
+            }
+        }    
+    }    
+    public static void main(String[] args) {
+        JOptionPane.showMessageDialog(null,"Bienvenido a Parquetour.");
+        JOptionPane.showMessageDialog(null, "Precio del minuto a $50.");
+        lista();
+        
+        Cliente persona=new Cliente();
+        persona.nombre="Carlos";
+        persona.apellido="Lopez";
+        persona.ocupacion="Abogado";
+        persona.edad=20;    
+        System.out.println("La marca del carro es: "+persona.nombre);
+        System.out.println("El color del carro es: "+persona.apellido);
+        System.out.println("La placa del carro es: "+persona.ocupacion);
+        System.out.println("El modelo del carro es: "+persona.edad);    
+        persona.tiempo(0,15);
+        
+        Cliente persona2=new Cliente();
+        persona.nombre="Lisa";
+        persona.apellido="Garcia";
+        persona.ocupacion="Dentista";
+        persona.edad=32;    
+        System.out.println("La marca del carro es: "+persona.nombre);
+        System.out.println("El color del carro es: "+persona.apellido);
+        System.out.println("La placa del carro es: "+persona.ocupacion);
+        System.out.println("El modelo del carro es: "+persona.edad);
+        persona.tiempo(0,20);
+        
+        Cliente persona3=new Cliente();
+        persona.nombre="Alex";
+        persona.apellido="Romanov";
+        persona.ocupacion="Profesor";
+        persona.edad=35;    
+        System.out.println("La marca del carro es: "+persona.nombre);
+        System.out.println("El color del carro es: "+persona.apellido);
+        System.out.println("La placa del carro es: "+persona.ocupacion);
+        System.out.println("El modelo del carro es: "+persona.edad);
+        persona.tiempo(0,60);
+        
+        Cliente persona4=new Cliente();
+        persona.nombre="Jonas";
+        persona.apellido="Mitchells";
+        persona.ocupacion="Estudiante";
+        persona.edad=23;    
+        System.out.println("La marca del carro es: "+persona.nombre);
+        System.out.println("El color del carro es: "+persona.apellido);
+        System.out.println("La placa del carro es: "+persona.ocupacion);
+        System.out.println("El modelo del carro es: "+persona.edad);
+        persona.tiempo(0,45);
+        
+        Cliente persona5=new Cliente();
+        persona.nombre="Miranda";
+        persona.apellido="Rodrigues";
+        persona.ocupacion="Ingeniera";
+        persona.edad=28;    
+        System.out.println("La marca del carro es: "+persona.nombre);
+        System.out.println("El color del carro es: "+persona.apellido);
+        System.out.println("La placa del carro es: "+persona.ocupacion);
+        System.out.println("El modelo del carro es: "+persona.edad);
+        persona.tiempo(0,120);
+    }
+    
+}
