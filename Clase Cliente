@@ -1,0 +1,26 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Atributos;
+
+/**
+ *
+ * @author dinal
+ */
+public class Cliente {
+    String nombre;
+    String apellido;
+    String ocupacion;
+    int edad;
+    void tiempo(int minutoinicio,int minutosalida){
+        int minumin=15;
+        int precio;
+        if(minumin>=minutosalida){
+            System.out.println("Puede salir gratis"+"\n");
+        }else if(minutosalida>minumin){
+            precio=minutosalida*50;
+            System.out.println("Total a pagar es: "+precio+" COP"+"\n");
+        }   
+}
+}
